@@ -284,15 +284,7 @@ The simulation allows the parking system to be tested without physical hardware.
 
 ---
 
-## 🛠️ Software Requirements
-
-Install:
-
-- Visual Studio Code
-- PlatformIO extension
-- Wokwi extension for VS Code, if simulation is required
-
-The project uses:
+## 🛠️ The project uses:
 
 ```text
 Platform: Espressif32
@@ -323,79 +315,6 @@ Smart-Parking-System/
 
 ---
 
-## ▶️ Build the Project
-
-Open PowerShell in the project directory:
-
-```powershell
-cd I:\Smart-Parking-System
-```
-
-Clean the previous build:
-
-```powershell
-C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe run --target clean
-```
-
-Build the firmware:
-
-```powershell
-C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe run
-```
-
-A successful build should finish with:
-
-```text
-========================================== [SUCCESS] ==========================================
-```
-
-The generated firmware is located at:
-
-```text
-.pio\build\esp32dev\firmware.bin
-```
-
----
-
-## 📟 Serial Monitor
-
-To monitor ESP32 serial output:
-
-```powershell
-C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe device monitor --port COMx
-```
-
-Replace `COMx` with the actual ESP32 COM port.
-
-Example:
-
-```powershell
-C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe device monitor --port COM5
-```
-
-The baud rate used by the firmware is:
-
-```text
-115200
-```
-
----
-
-## 🧹 Clean Build
-
-If PlatformIO behaves unexpectedly, clean the build:
-
-```powershell
-C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe run --target clean
-```
-
-Then rebuild:
-
-```powershell
-C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe run
-```
-
----
 
 ## 🚧 Project Limitations
 
