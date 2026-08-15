@@ -397,16 +397,6 @@ C:\Users\Administrator\.platformio\penv\Scripts\platformio.exe run
 
 ---
 
-## ⚠️ Important Hardware Note
-
-The HC-SR04 ultrasonic sensor commonly operates its ECHO output at approximately 5 V, while ESP32 GPIO pins use 3.3 V logic.
-
-For a physical hardware implementation, use an appropriate voltage divider or level-shifting circuit on each HC-SR04 ECHO connection before connecting it to an ESP32 GPIO.
-
-This concern may not apply in the same way to the Wokwi simulation.
-
----
-
 ## 🚧 Project Limitations
 
 This project is a prototype smart-parking system.
@@ -467,13 +457,9 @@ C++
 ```
 
 ---
-
-## 📜 License
-
-This project is provided for educational, academic, and prototype-development purposes.
-
-See the repository license for the applicable terms.
-
+## 👨‍💻 Author
+Shresthaa Maiti
+ 
 ---
 
 ## ⭐ Project Summary
