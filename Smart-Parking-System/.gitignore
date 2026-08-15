@@ -1,0 +1,13 @@
+# PlatformIO
+.pio/
+.piolibdeps/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Wokwi generated
+wokwi.vcd

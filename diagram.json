@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "author": "Smart Parking System",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 20,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ssd1306",
+      "id": "oled",
+      "top": -80,
+      "left": 250,
+      "attrs": {
+        "i2cAddress": "0x3C"
+      }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sensor1",
+      "top": 180,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sensor2",
+      "top": 300,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sensor3",
+      "top": 420,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sensor4",
+      "top": 540,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": 100,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 250,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "entryButton",
+      "top": 360,
+      "left": 500,
+      "attrs": {
+        "color": "green",
+        "label": "ENTRY"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "exitButton",
+      "top": 450,
+      "left": 500,
+      "attrs": {
+        "color": "red",
+        "label": "EXIT"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 180,
+      "left": 650,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 260,
+      "left": 650,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 340,
+      "left": 650,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": 420,
+      "left": 650,
+      "attrs": {
+        "color": "green"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:21",
+      "oled:SDA",
+      "green",
+      []
+    ],
+    [
+      "esp:22",
+      "oled:SCL",
+      "blue",
+      []
+    ],
+    [
+      "esp:3V3",
+      "oled:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "oled:GND",
+      "black",
+      []
+    ],
+
+    [
+      "esp:13",
+      "sensor1:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:14",
+      "sensor1:ECHO",
+      "yellow",
+      []
+    ],
+    [
+      "esp:3V3",
+      "sensor1:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "sensor1:GND",
+      "black",
+      []
+    ],
+
+    [
+      "esp:25",
+      "sensor2:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:26",
+      "sensor2:ECHO",
+      "yellow",
+      []
+    ],
+    [
+      "esp:3V3",
+      "sensor2:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "sensor2:GND",
+      "black",
+      []
+    ],
+
+    [
+      "esp:27",
+      "sensor3:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:32",
+      "sensor3:ECHO",
+      "yellow",
+      []
+    ],
+    [
+      "esp:3V3",
+      "sensor3:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "sensor3:GND",
+      "black",
+      []
+    ],
+
+    [
+      "esp:33",
+      "sensor4:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:34",
+      "sensor4:ECHO",
+      "yellow",
+      []
+    ],
+    [
+      "esp:3V3",
+      "sensor4:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "sensor4:GND",
+      "black",
+      []
+    ],
+
+    [
+      "esp:18",
+      "servo:PWM",
+      "orange",
+      []
+    ],
+    [
+      "esp:5V",
+      "servo:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "servo:GND",
+      "black",
+      []
+    ],
+
+    [
+      "esp:19",
+      "buzzer:1",
+      "purple",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "buzzer:2",
+      "black",
+      []
+    ],
+
+    [
+      "esp:4",
+      "entryButton:1.l",
+      "green",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "entryButton:2.l",
+      "black",
+      []
+    ],
+
+    [
+      "esp:16",
+      "exitButton:1.l",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "exitButton:2.l",
+      "black",
+      []
+    ],
+
+    [
+      "esp:23",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led1:C",
+      "black",
+      []
+    ],
+
+    [
+      "esp:17",
+      "led2:A",
+      "green",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led2:C",
+      "black",
+      []
+    ],
+
+    [
+      "esp:2",
+      "led3:A",
+      "green",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led3:C",
+      "black",
+      []
+    ],
+
+    [
+      "esp:15",
+      "led4:A",
+      "green",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "led4:C",
+      "black",
+      []
+    ]
+  ]
+}
